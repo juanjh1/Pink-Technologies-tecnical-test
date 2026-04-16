@@ -82,3 +82,15 @@ ya que me premite manejar errores con monads y tambien me permite usar
 un estilo hibrydo entre poo y funcional.
 
 Para el manejo de errores como dije use monads, pero tambien try catch
+
+## Inversion de dependencias 
+
+La verdad para el proyecto, intente usar algo de inversion de dependencias pero
+por el tiempo que me tomo planear la arquitectura, no alcance a dejarlo clean
+me enfoque mas que todo en que el endpoint que iba a utilizar funcionara y que la 
+aplicacion fuera "segura" en temas de Autenticacion y Authorization.
+
+#Deployment 
+El Deployment se hizo en azure tal y como se pidio, se uso un virtual machine
+ya que no se esta trabajando con mucho storage, no estamos usando nigun storage 
+externo.
