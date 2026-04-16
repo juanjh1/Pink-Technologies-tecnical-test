@@ -1,0 +1,339 @@
+_type: export
+__export_format: 4
+__export_date: 2026-04-16T21:51:57.934Z
+__export_source: insomnia.desktop.app:v10.3.1
+resources:
+  - _id: req_84ae396b0c6046d9b3d29769e7c389e6
+    parentId: fld_93b248eb83414264bf5e50fa7899d917
+    modified: 1776376226230
+    created: 1776376132073
+    url: "{{ _.baseUrl }}coins/convert"
+    name: New Request
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_983ccd4b522c4239964d5050f06dc449
+        name: coins
+        value: btc,eth
+        description: ""
+        disabled: false
+      - id: pair_19f1bbad27f84795a74703dfbeca470b
+        name: amount
+        value: "10"
+        description: ""
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/10.3.1
+        id: pair_90af3832030d449dbad81bc03921c4b4
+      - id: pair_82b9c36d556e4484bdabe9cf0c62e671
+        name: Authorization
+        value: "{{ _.token }}"
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1776376132073
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_93b248eb83414264bf5e50fa7899d917
+    parentId: wrk_c5cd509d9b3140b6972eab75f7ed8214
+    modified: 1776376125414
+    created: 1776375812750
+    name: GECKO
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1776375812751
+    environmentType: kv
+    _type: request_group
+  - _id: wrk_c5cd509d9b3140b6972eab75f7ed8214
+    parentId: null
+    modified: 1776374634663
+    created: 1776374634663
+    name: first
+    description: ""
+    scope: collection
+    _type: workspace
+  - _id: req_55479490712844dc8f35c353acd4032e
+    parentId: fld_ba835df2bd5a4fa1a6f53889e4659f3a
+    modified: 1776376143071
+    created: 1776375700587
+    url: "{{ _.baseUrl }}users/1"
+    name: Get one
+    description: ""
+    method: DELETE
+    body: {}
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/10.3.1
+        id: pair_008b177e44854efb96ee68e27779a8a4
+      - id: pair_949c385f3a6e49beb682d3a68abe39e1
+        name: Authorization
+        value: "{{ _.token }}pair_949c385f3a6e49beb682d3a68abe39e1"
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1776374688642
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_ba835df2bd5a4fa1a6f53889e4659f3a
+    parentId: wrk_c5cd509d9b3140b6972eab75f7ed8214
+    modified: 1776374682086
+    created: 1776374682086
+    name: User
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1776374682087
+    environmentType: kv
+    _type: request_group
+  - _id: req_7c053bfc357f48e7bf6be589c1100212
+    parentId: fld_ba835df2bd5a4fa1a6f53889e4659f3a
+    modified: 1776375299944
+    created: 1776374688542
+    url: "{{ _.baseUrl }}users/"
+    name: Create
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"firstName" : "{% faker 'randomNoun' %}",
+        	"lastName" : "{% faker 'randomLastName' %}",
+        	"username" : "{% faker 'randomUserName' %}",
+        	"age"				: 18,
+        	"password" : "123456",
+        	"role":"user"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.3.1
+    authentication: {}
+    metaSortKey: -1776374688542
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_b88d1fcfb8e541008da7fc39e7691586
+    parentId: fld_ba835df2bd5a4fa1a6f53889e4659f3a
+    modified: 1776375383875
+    created: 1776375283984
+    url: "{{ _.baseUrl }}auth/login/"
+    name: Login
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"username" : "Aubree20",
+        	"password" : "123456"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.3.1
+    authentication: {}
+    metaSortKey: -1775965942388.375
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9773fce1ccda476baed60284a5cb591d
+    parentId: fld_ba835df2bd5a4fa1a6f53889e4659f3a
+    modified: 1776375691139
+    created: 1776375028902
+    url: "{{ _.baseUrl }}users/"
+    name: Find all
+    description: ""
+    method: GET
+    body: {}
+    parameters:
+      - id: pair_0eee477810bf4fe9aec8318828575040
+        name: ""
+        value: ""
+        description: ""
+        disabled: false
+      - id: pair_9367976aed654b3b91dfb19952517ed0
+        name: ""
+        value: ""
+        description: ""
+        disabled: false
+    headers:
+      - name: User-Agent
+        value: insomnia/10.3.1
+        id: pair_15b816d04ebe48e4a64ce94aef1f3f68
+      - id: pair_08f8da6f6e604a6097d3c95cfa938fb0
+        name: Authorization
+        value: "{{ _.token }}"
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1775557196234.75
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_cce74b6016f5455fb42421e56a714367
+    parentId: fld_ba835df2bd5a4fa1a6f53889e4659f3a
+    modified: 1776376097262
+    created: 1776375874495
+    url: "{{ _.baseUrl }}coins/convert"
+    name: delete
+    description: ""
+    method: GET
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"coins":"btc",
+        	"amount": 10
+        }
+    parameters:
+      - id: pair_0eee477810bf4fe9aec8318828575040
+        name: coins
+        value: btc
+        description: ""
+        disabled: false
+      - id: pair_9367976aed654b3b91dfb19952517ed0
+        name: amount
+        value: "10"
+        description: ""
+        disabled: false
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.3.1
+        id: pair_15b816d04ebe48e4a64ce94aef1f3f68
+      - id: pair_08f8da6f6e604a6097d3c95cfa938fb0
+        name: Authorization
+        value: "{{ _.token }}"
+        description: ""
+        disabled: false
+    authentication: {}
+    metaSortKey: -1774944077004.3125
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_09366b45050a431fac851f51c628ba9f
+    parentId: fld_ba835df2bd5a4fa1a6f53889e4659f3a
+    modified: 1776375014570
+    created: 1776375009802
+    url: "{{ _.baseUrl }}users/"
+    name: Update
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"firstName" : "{% faker 'randomNoun' %}",
+        	"lastName" : "{% faker 'randomLastName' %}",
+        	"username" : "{% faker 'randomUserName' %}",
+        	"age"				: 18,
+        	"password" : "{% faker 'randomPassword' %}",
+        	"role":"user"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/10.3.1
+    authentication: {}
+    metaSortKey: -1774739703927.5
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_d5169828597d0786d0abc03f5a7d15b2bd0265c2
+    parentId: wrk_c5cd509d9b3140b6972eab75f7ed8214
+    modified: 1776375686557
+    created: 1776374634670
+    name: Base Environment
+    data:
+      baseUrl: http://localhost:8100/
+      token: Bearer
+        eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiQXVicmVlMjAiLCJmaXJzdE5hbWUiOiJwb3J0IiwibGFzdE5hbWUiOiJOb2xhbiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzc2Mzc1NDkyLCJleHAiOjE3NzYzNzkwOTJ9.D5_VEBuKSXLyF4zgbWy657stQ9kZDUu82eLxxQg2YBc
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1776374634671
+    environmentType: kv
+    kvPairData:
+      - id: envPair_ec826fa5b4bf470bb87c181e80cefbf0
+        name: baseUrl
+        value: http://localhost:8100/
+        type: str
+        enabled: true
+      - id: envPair_9a8c0876e01945fdb13d5137c643b1b1
+        name: token
+        value: Bearer
+          eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjIsInVzZXJuYW1lIjoiQXVicmVlMjAiLCJmaXJzdE5hbWUiOiJwb3J0IiwibGFzdE5hbWUiOiJOb2xhbiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzc2Mzc1NDkyLCJleHAiOjE3NzYzNzkwOTJ9.D5_VEBuKSXLyF4zgbWy657stQ9kZDUu82eLxxQg2YBc
+        type: str
+        enabled: true
+    _type: environment
+  - _id: jar_d5169828597d0786d0abc03f5a7d15b2bd0265c2
+    parentId: wrk_c5cd509d9b3140b6972eab75f7ed8214
+    modified: 1776374634678
+    created: 1776374634678
+    name: Default Jar
+    cookies:
+      - id: c45d73a3-e64a-488b-b6cf-cf87e08602ba
+        key: foo
+        value: bar
+        domain: domain.com
+        expires: 2147483647000
+        path: /
+        secure: false
+        httpOnly: false
+    _type: cookie_jar

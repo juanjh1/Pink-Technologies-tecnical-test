@@ -2,10 +2,12 @@ import { AppDataSource } from "./data-source.js"
 import express from "express"
 import { userRoutes } from "./routes/user.routes.js"
 import { authRoutes } from "./routes/auth.routes.js"
+import { coinRoutes } from "./routes/coin.routes.js"
 const app = express()
 app.use(express.json())
 app.use("/auth", authRoutes())
 app.use("/users", userRoutes())
+app.use("/coins", coinRoutes())
 const port = 8100
 
 AppDataSource.initialize().then(async () => {
