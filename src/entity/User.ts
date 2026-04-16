@@ -11,11 +11,14 @@ export class User {
     @Column()
     lastName!: string
 
+    @Column({ unique: true })
+    username!: string
+
     @Column()
     age!: number
     
     @Column()
-    password!: number
+    password!: string
     
     @Column({default:"user"})
     role!: string
